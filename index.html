@@ -1,12 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Crud Operation</h2>
-</body>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: gray;
+                text-align: center;
+                padding: 5px;
+            }
+            h1{
+                text-decoration: underline;
+            }
+            input{
+                margin-top: 10px;
+            }
+            button{
+                margin-top: 10px;
+                padding: 10px;
+                border-radius: 30px;
+            }
+            .add{
+                color: red;
+                background-color: greenyellow;
+            }
+            .user{
+                background-color: blue;
+                color: white;
+            }
+            .delete{
+                background-color: red;
+            }
+            .edit{
+                background-color: yellow;
+            }
+            .show{
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center; color: red;background-color: black;">CRUD APPLICATION</h1>
+        <h1>Add User</h1>
+        <form action="/addUser" method="post">
+            
+            User ID <input type = "text" id="userid" name="userid" size="20"><br>
+            Name <input type ="text" id="username" name = "username" size="20"><br>
+            DOB <input type ="text" id="dob" name = "dob" size="20"><br>
+            Profession <input type ="text" id="profession" name = "profession" size="20"><br>
+            <button type = "submit" name="submit" class="add">
+                Add User
+            </button>
+        </form>
+
+        <h1>User Details</h1>
+        <form action="/particularUser" method="post"> 
+            User ID <input type = "text" id="urid" name="urid" size="20"><br>
+            <button type = "submit" name="submit" class="user">
+                Get User Info
+            </button>
+        </form>
+
+        <h1>Delete User</h1>
+        <form action="/deleteUser" method="post"> 
+            User ID <input type = "text" id="uid" name="uid" size="20"><br>
+            <button type = "submit" name="submit" class="delete">
+                Delete User
+            </button>
+        </form>
+        
+        <h1>Edit User</h1>
+        <form action="/edit" method="post">
+            User ID <input type = "text" id="userid" name="userid" size="20"><br>
+            Name <input type ="text" id="username" name = "username" size="20"><br>
+            DOB <input type ="text" id="dob" name = "dob" size="20"><br>
+            Profession <input type ="text" id="profession" name = "profession" size="20"><br>
+            <button type = "submit" name="submit" class="edit">
+                Edit User
+            </button>
+        </form>
+        
+
+        <h1>Show All User</h1>
+        <form action="/showAll" method="get"> 
+            <button type = "submit" name="submit" class="show">
+                Show All User Info
+            </button>
+        </form>
+    </bddy>
 </html>
